@@ -34,7 +34,5 @@
     
    </bean>
    
-  <!--  <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcesser"></bean>
-
-     -->
+  
     </beans>

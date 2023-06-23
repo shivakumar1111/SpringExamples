@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    
+    <bean id="triangle" class="com.sonata.spring15jun.Triangle" >
+     <property name="pointA" ref="pointA" ></property>
+    <property name="pointB" ref="pointB"></property>
+    <property name="pointC" ref="pointC"></property>
+   </bean>
+    
+    
+    <bean id="pointA" class="com.sonata.spring15jun.Points">
+    <qualifier value="circlerelated"></qualifier>
+    <property name="x" value="0"></property>
+    <property name="y" value="0"></property>
+    </bean>
+    
+    <bean id="pointB" class="com.sonata.spring15jun.Points">
+    <property name="x" value="-20"></property>
+    <property name="y" value="0"></property>
+    </bean>
+    
+    <bean id="pointC" class="com.sonata.spring15jun.Points">
+    <property name="x" value="20"></property>
+    <property name="y" value="0"></property>
+    </bean>
+    
+    <bean id="circle" class="com.sonata.spring15jun.Circle" >
+     <property name="center" ref="pointA" ></property>
+    
+   </bean>
+   
+  <!--  <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcesser"></bean>
+
+     -->
+    </beans>
